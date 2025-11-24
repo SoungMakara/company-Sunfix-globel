@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Main Colors */
+    --sunfix-green: #00a651;
+    --sunfix-dark-green: #004d26;
+    --sunfix-highlight: #00d84a;
+    /* Placeholder Color (Dark Purple/Blue) */
+    --placeholder-purple: #7b7dbe;
+}
+
+.container-header {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    animation: gradientMove 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #00d84a;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #e5ffe5 !important;
+}
+
+.nav-item {
+    font-size: 20px;
+}   
+
+.case-study-title {
+    color: #28a745;
+    
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.meta-info span {
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+}

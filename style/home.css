@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Main Colors */
+    --sunfix-green: #00a651;
+    --sunfix-dark-green: #004d26;
+    --sunfix-highlight: #00d84a;
+    /* Placeholder Color (Dark Purple/Blue) */
+    --placeholder-purple: #7b7dbe;
+}
+
+.container-header {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    animation: gradientMove 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #00d84a;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #e5ffe5 !important;
+}
+
+.nav-item {
+    font-size: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+}
+
+.hero-text h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.highlight {
+    color: var(--sunfix-highlight);
+}
+
+.fw-bold.fs-1 {
+    /* Targeting the SUNFIX best IT solution line */
+    color: var(--sunfix-highlight);
+}
+
+/* Custom Button */
+.btn-explore {
+    background-color: var(--sunfix-dark-green);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: var(--sunfix-green);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.picture-box {
+    /* background-color: #6670b4; */
+    height: 350px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.picture-box img {
+    object-fit: cover;
+    /* Ensures the image covers the box well */
+}
+
+/* Carousel Fix */
+.carousel-img {
+    max-height: 400px;
+    /* Custom height for carousel images */
+    object-fit: cover;
+}
+
+/* Service Cards */
+.service-card {
+    padding: 35px;
+    border-radius: 12px;
+    background: #07f4a5;
+    /* Bright green background from original code */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card.active {
+    color: #000;
+    /* Ensuring text is readable against the bright background */
+}
+
+.service-card h4 {
+    color: var(--sunfix-dark-green);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-box img {
+    width: 40px;
+}
+
+/* About Us/Case Study Placeholders */
+.placeholder-block {
+    background-color: var(--placeholder-purple);
+}
+
+/* hover card container */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0049c7;
+    border-color: #003fae;
+    transform: translateX(5px);
+    /* move → on hover */
+}
+
+.card {
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.circle-box {
+    width: 80px;
+    /* Increased size */
+    height: 80px;
+    background: #d6e972;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-size: 10px;
+    /* Increased font size */
+    color: #000;
+    transition: 0.3s ease;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.circle-box:hover {
+    transform: scale(1.1);
+    background: #cbe55c;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-area {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    text-align: right;
+}
+
+.social-area a {
+    color: white;
+    margin-left: 10px;
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+
+.social-area a:hover {
+    color: #000;
+    transform: scale(1.3);
+}
+
+/* Client/Partner Logos section */
+.client-logos img {
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.client-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive adjustments for social media area */
+@media (max-width: 768px) {
+    .social-area {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Footer */
+.about-section {
+    background: #059c3f;
+    padding: 40px 0;
+    /* Increased padding for better spacing */
+    position: relative;
+    color: white;
+    min-height: 150px;
+    /* Ensure space for content */
+}
